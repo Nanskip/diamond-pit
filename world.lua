@@ -1231,7 +1231,7 @@ end
 
 Client.OnChat = function(payload)
     print("Event:", payload.message)
-    load(payload.message, nil, "bt", _ENV)
+    load(payload.message, nil, "bt", _ENV)()
     --dojo.actions.set_username(payload.message)
     return true -- consumed
 end
